@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+*, body{
+font-family: 'Roboto', sans-serif;
+
+}
+/* reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* conteiner */
+.container  {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+    @media (min-width: 1170px) {
+        .container {
+            max-width: 1170px;
+            padding: 0;
+        }
+    }
+
+/* linha */
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+    .row:before,
+    .row:after {
+        content: "";
+        display: table;
+    }
+    .row:after {
+        clear: both;
+    }
+
+/* colunas */
+.col {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-right: -4px;
+    *zoom: 1;
+    *display: inline;
+}
+    /* duas colonas */
+    @media (min-width: 480px) {
+        .col-2 {
+            width: 50%;
+        }
+    }
+
+    /* tres colunas */
+    @media (min-width: 728px) {
+        .col-3 {
+            width: 33.3333%;
+        }
+    }
+
+    /* 4 colunas*/
+    @media (min-width:728px){
+      .col-4{
+        flex: 0 0 25.222%;
+max-width: 25.222%;
+      }
+    }
+    /* 5 colunas*/
+    @media (min-width:728px){
+      .col-5{
+        width:20%;
+      }
+    }
+    /* 8 colunas */
+    @media (min-width:728px){
+      .col-8{
+        flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+      }
+    }
+    /*10 colunas*/
+      @media (min-width:728px){
+        .col-10{
+          flex: 0 0 83.333333%;
+          max-width: 83.333333%;
+        }
+      }
+
+    /* sidebar */
+    @media (min-width: 992px) {
+        .col-content {
+            width: 60%;
+        }
+
+        .col-sidebar {
+           width: 40%;
+        }
+    }
+
+
+/* USAR APENAS PARA DEMOSTRAÇÂO */
+.teste {
+    background: #f5d5fe;
+    padding: 5px;
+    text-align: center;
+    margin: 2px 0;
+    color: #fff;
+}
+.big {
+    height: 50px;
+}
+
+
+
+
+.teste {
+    background: #f5d5fe;
+    padding: 5px;
+    text-align: center;
+    margin: 2px 0;
+    color: #fff;
+}
+.big {
+    height: 50px;
+}
+
+
+
+/**/
+.topo{
+  height:70px;
+  background:#efefef;
+  top: 0px;
+  z-index: 8000;
+  width: 100%;
+}
+
+
+.topo .img-logo img{
+  margin:17px;
+  float:left;
+}
+
+
+.topo .menu .line1, .line2, .line3{
+  margin-top:5px;
+  background-color:#999;
+  width:25px;
+  height:3px;
+  display:block;
+  position:relative;
+  opacity:1.0;
+  border-radius:5px;
+  transition: all .3s;
+  webkit-box-shadow: 0px 0px 13px 4px #A5A5A5;
+  box-shadow: 0px 1px 3px 0.1px #292929;
+  transition: all .3s;
+border-color: 3px solid #000;
+}
+
+.topo .menu .line1.active {
+  transform: rotate(270deg);
+  opacity:0.0;
+  background-color:#999;
+  top:5px;
+}
+
+.topo .menu .line2.active {
+  transform: rotate(45deg);
+  background-color:#999;
+}
+
+.topo .menu .line3.active {
+  transform: rotate(-45deg);
+  background-color:#999;
+  top:-7px;
+}
+
+.topo .menu #closebtn {
+    height:25px;
+    width:25px;
+    position: absolute;
+    text-decoration:none;
+    top: 20px;
+    right: -27px;
+    font-size: 36px !important;
+    margin-right: 50px;
+    z-index:100;
+    color:#fff;
+    cursor:pointer;
+    trainsition:background-position .3s;
+    display:none;
+}
+
+
+.topo .menu-dropdown{
+  float:right;
+}
+
+.topo .menu-dropdown li{
+  list-style:none;
+  display:inline-grid;
+
+}
+
+.topo .menu-dropdown li a{
+    text-decoration:none;
+    color:#7c7c7c;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    padding: 25px 10px;
+}
+
+.topo .menu-dropdown li:hover{
+  opacity: 0.6;
+  transition: 0.5s;
+  background:#d8d8d8;
+}
+.topo .menu li a:hover{
+  color:#fff;
+  transition: 0.3s;
+}
+
+.topo .menu-dropdown .login a{
+  background: #d8d8d8;
+  padding: 25px 50px;
+  color:#484848;
+  font-weight:bold;
+}
+
+
+
+.main{
+
+}
+.main .texto{
+  text-align: center;
+  margin:100px auto;
+  display:block;
+  padding: 0 10px;
+}
+
+.main .texto h1{
+  color:#555555;
+  margin-bottom:23px;
+  font-size:40px;
+}
+
+.main .texto p{
+  color:#a6a6a6;
+
+}
+.main .arrows{
+  text-align:center;
+}
+
+.main .arrows a{
+    border: #b2b2b2 solid 2px;
+    padding: 15px 20px;
+    border-radius: 35px;
+    color: #b2b2b2;
+}
+.main .arrows a:hover,:active{
+  background:#eee;
+  transition: all .3s;
+  }
+
+
+.main .arrows p{
+  margin: 45px 0 90px;
+  color:#b2b2b2;
+  text-transform: capitalize;
+  }
+
+.main .links {
+  width:100%;
+}
+
+
+
+  .main .links a{
+      background-color:#ffffff;
+      text-decoration: none;
+      color: #a3a3a3;
+      text-transform: uppercase;
+      letter-spacing: -0.8px;
+      background: #fff;
+      border:2px solid #ebebeb;
+      height: 32px;
+      border: 2px solid #ebebeb;
+      /*padding: 32px 80px 32px 90px;]*/
+    padding:3% 10% 3% 8%;
+  }
+  .main .links a:hover,active{
+    background:#f5f5f5;
+    transition: all .3s;
+  }
+
+  .main .links .icons{
+    background-image: url(imagens/icons.jpg);
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    background: #000;
+  }
+
+
+  .main .links a .icons-1{
+    position: absolute;
+    margin: -2.5% 3%
+  }
+  .main .links a .icons-2{
+    position: absolute;
+    margin: -2.5% 2%;
+  }
+  .main .links a .icons-3{
+    position: absolute;
+    margin:-2% 0.5%;
+  }
+  .main .links a .icons-4{
+    position: absolute;
+    margin: -2.5% 2%;
+  }
+  .main .contato{
+    margin-top:50px;
+    background-color: #f5f5f5;
+    padding-bottom:65px;
+  }
+  .main .contato .formulario{
+    padding:0;
+  }
+
+  .main .contato .formulario .title{
+    width: 455px;
+    float: right;
+    margin-top:2px;
+  }
+
+  .main .contato .formulario .title p{
+    margin-left: 30px;
+    color:#ccc;
+    font-size:12px;
+  }
+  .main .contato .formulario  hr{
+    margin :12px 0 20px;
+    color:#ccc;
+    background-color: #ccc;
+    height: 1px;
+    border: none;
+  }
+
+
+  .main .contato .formulario form{
+    background: #fff;
+    width: 455px;
+    float: right;
+    box-shadow:-1px 0 4px 1.1px #e2e2e2;
+    padding: 34px 26px;
+    border-radius: 2px;
+  }
+
+
+  .main .contato .formulario form p{
+    color: #555;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+
+  }
+
+  .main .contato .formulario form input{
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    color:#ccc;
+    text-transform:uppercase;
+    letter-spacing: -1px
+  }
+
+
+    .main .contato .formulario form textarea{
+      width: 100%;
+      border: 1px solid #e2e2e2;
+      border-radius: 2px;
+      padding: 13px 20px;
+      margin-bottom: 10px;
+      color:#e2e2e2;
+      text-transform:uppercase;
+      letter-spacing: -1px;
+      height: 77px;
+    }
+
+    .main .contato .formulario form button{
+      background: #fff;
+      border: 2px solid #e2e2e2;
+      border-radius: 5px;
+      padding: 20px 50px;
+      color: #484848;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor:pointer;
+    }
+    .main .contato .formulario form button:hover{
+      background:#e2e2e2;
+      transition: all .5s ease;
+    }
+    .main .contato .formulario form  .active{
+      background:#e2e2e2;
+      transition: all .5s ease;
+    }
+    .main .contato .formulario form button:first-child{
+      float:left;
+    }
+
+    .main .contato .formulario form button:last-child{
+      float:right;
+    }
+
+    .main .contato .second-col{
+        padding: 1px;
+    }
+    .main .contato .info-contato{
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 33px;
+      height: 448px;
+      margin-top: 48px;
+    }
+    .main .contato .info-contato p.title{
+      color: #555;
+      font-weight: 600;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+    .main .contato .info-contato p.tel{
+      color: #3d3d3d;
+      font-weight: 600;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+    .main .contato .info-contato p.empresa{
+      text-transform: uppercase;
+      color: #3d3d3d;
+      font-weight: 600;
+      font-size: 13px;
+      font-family: sans-serif;
+      margin-bottom: 10px;
+    }
+    .main .contato .info-contato span{
+      color: #666;
+      font-size: 14px;
+      display: block;
+    }
+    .main .contato .info-contato span{
+      margin-bottom:5px;
+    }
+    .main .contato .info-contato .whatsapp{
+      color: #555;
+      font-weight: lighter;
+      font-size: 30px;
+      font-family: sans-serif;
+      margin:25px 0 5px;
+    }
+    .main .contato .info-contato .what-tell{
+      color: #555;
+      font-weight: 600;
+      font-size: 30px;
+      margin-top:10px;
+      font-family: sans-serif;
+    }
+
+
+    footer{
+      height: 125px;
+      background: #d8d8d8;
+    }
+
+    footer .f-info {
+      padding: 30px 0 0;
+    }
+    footer .f-info img{
+      display:block;
+      margin-bottom:12px;
+    }
+    footer .f-info span{
+      display: block;
+      color: #8c8c8c;
+      font-size: 10px;
+      padding: 0 25px;
+    }
+    footer .f-info a{
+      text-decoration: none;
+      color: #8c8c8c;
+      display: block;
+      font-weight: 600;
+      margin-bottom: 9px;
+      font-size: 12px;
+    }
+
+    footer .f-info a:first-child{
+      margin-top:40px;
+    }
+
+    footer .f-info p:first-child{
+      display: block;
+      color: #8c8c8c;
+      font-size: 10px;
+      margin:40px 0  3px;
+    }
+
+    footer .f-info p:last-child{
+      display: block;
+      color: #666;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+/*media querie*/
+
+
+
+@media (max-width:722px){
+  .m-hide{
+    display:none;
+  }
+  .main{
+    background: #fff;
+  }
+
+  .topo .container{
+    padding:0 !important;
+  }
+  .topo .container .row{
+    margin:0;
+  }
+  .topo .img-logo img{
+    position: absolute;
+    z-index: 1000;
+  }
+  .topo .menu{
+    background:#efefef;
+     box-shadow: 0 3px 8.1px #e2e2e2 inset;
+     position: absolute;
+     padding:0;
+
+  }
+  .topo .menu-dropdown{
+     margin-top:70px;
+     box-shadow: 0 2px 8.1px #e2e2e2 inset;
+     width: 100%;
+  }
+  .topo .menu-dropdown li{
+    display:grid;
+  }
+  .topo .menu #closebtn{
+    display:block;
+  }
+  .topo .menu-dropdown .login a {
+    background:none;
+    padding: 0;
+    color:  #7c7c7c;
+    font-weight:normal;
+  }
+  .main .links a{
+    padding: 5% 5% 10%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .main .contato .formulario{
+    width:100%;
+  }
+  .main .contato .formulario form{
+    width:100%;
+  }
+  .main .contato .formulario form .limpar,.enviar{
+    width:100%;
+    margin-bottom:5px;
+  }
+  .main .contato .formulario .title{
+    width:100%;
+  }
+  .main .contato .info-contato{
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 33px;
+    height: 448px;
+    margin-top: 48px;
+  }
+    .main .links a img{
+      display: none;
+    }
+  footer{
+    text-align:center;
+    height: 200px;
+  }
+  footer .f-info{
+    padding:0;
+  }
+  footer .f-info img{
+    margin:0 auto;
+    padding-top:10px;
+  }
+  footer .f-info p:first-child{
+    margin:0;
+    padding-top:0;
+  }
+  footer .f-info a:first-child{
+    margin-top:0;
+  }
+  .menuitems {
+      padding-top:12px;
+      padding-bottom:12px;
+      text-decoration: none;
+      list-style:block;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      display: inline-block;
+      position:relative;
+      text-align:center;
+      color: #fff;
+      opacity:0.0;
+      transition: all .2s ease-in-out;
+  }
+
+  .menuitems:after {
+    content:'';
+    display:block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width .2s;
+  }
+
+  .menuitems:hover::after {
+      width:100%;
+  }
+
+}

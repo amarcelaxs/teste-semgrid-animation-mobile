@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Haytek</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body id="body">
+  <header>
+    <div class="topo">
+      <div class="container">
+        <div class="row">
+          <a href="#" class=" img-logo ">
+            <img src="imagens/logo.jpg">
+          </a>
+          <div id="menu" class="menu col col-10">
+            <span id="closebtn" onclick="navToggle()">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </span>
+              <ul class="menu-dropdown">
+                  <li><a class="menuitems"  href="#">Nossas Lentes </a></li>
+                  <li><a  class="menuitems" href="#">Porque a Haytek</a></li>
+                  <li><a  class="menuitems" href="#">Diferenciais</a></li>
+                  <li><a  class="menuitems" href="#">Contato</a></li>
+                  <li class="login"><a  class="menuitems"  href="#">Fazer login</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class=" main">
+    <div class="container">
+      <div class="row">
+        <div class="texto col col-2">
+          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+          <p>Nunc dictum orci eget tincidunt placerat. Phasellus ut viverra metus. Aenean quis ipsum eget neque pharetra bibendum. </p>
+        </div>
+          <div class="arrows">
+            <a href="#">
+              <i class="fas fa-long-arrow-alt-down"></i>
+            </a>
+            <p>Ver lentes</p>
+          </div>
+      </div>
+    </div>
+    <div class="col links">
+      <a href="#"><img class="icons-1" src="imagens/lentes.jpg">Nossas Lentes</a>
+      <a href="#"><img class="icons-2" src="imagens/lente-one.jpg">Filtro Azul</a>
+      <a href="#"><img class="icons-3" src="imagens/grau.jpg">Banner 3</a>
+      <a href="#" ><img class="icons-4" src="imagens/glass.jpg">Banner 4W</a>
+    </div>
+    <div class="col contato">
+      <div class="container">
+        <div class="row">
+          <div class="col formulario  col-2">
+            <div class="title">
+              <p >Contato</p>
+              <hr>
+            </div>
+            <form action="">
+              <p>Fale Conosco</p>
+              <input placeholder="Nome" value="nome">
+              <input placeholder="Email" value="Email">
+              <input placeholder="Assunto" value="assunto">
+              <textarea placeholder="Mensagem" width="300" height="500"></textarea>
+              <button class="limpar">Limpar</button>
+              <button class="active enviar">Enviar Mensagem</button>
+            </form>
+          </div>
+          <div class="second-col col col-3">
+            <div class="info-contato">
+              <p class="title">Contatos</p>
+              <p class="tel">21 2589 6961 </p>
+              <p class="tel">21 2147 0228 </p>
+              <p class="empresa">HTK LENTES OFTALMICAS LTDA.</p>
+              <span>Rua general Almérico de Moura</span>
+              <span>342, São Cristovão</span>
+              <span>Rio de Janeiro, RJ </span>
+              <span>20921-060 Brasil</span>
+              <p class="whatsapp">Whatsapp</p>
+              <p class="what-tell">21 96714 5980</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col f-info col-5">
+          <img src="imagens/logo-footer.jpg">
+          <span>Rua general Almérico de Moura 342</span>
+          <span>São Cristovão Rio de Janeiro, RJ</span>
+          <span> 20921-060 Brasil</span>
+        </div>
+        <div class="col f-info  col-5">
+          <a href="#">Sobre a Haytek</a>
+          <a href="#">Contato</a>
+        </div>
+        <div class="col f-info  m-hide col-5"></div>
+        <div class="col f-info   col-5">
+          <p>Contato</p>
+          <p>21 2589 6961</p>
+        </div>
+        <div class="col f-info  col-5">
+          <p>Whatsapp</p>
+          <p>21 96714 5980</p>
+        </div>
+      </div>
+    </div
+  </footer>
+
+</div>
+<script>
+  var nav = document.getElementById("menu");
+  var menu = document.getElementsByClassName("menuitems");
+  var close = document.getElementById("closebtn");
+  var main = document.getElementById("main");
+
+  //default to measure if/else from
+  nav.style.height = "50px";
+  for (i = 0; i < menu.length; i++){menu[i].style.marginTop="0";};
+
+  close.addEventListener("click", function(){
+    var menuIcon = close.children;
+    for (i = 0; i < menuIcon.length; i++){
+    menuIcon[i].classList.toggle("active");
+    }
+  });
+
+  function navToggle() {
+  	//to close
+  	if (nav.style.height <= "475px") {
+  	nav.style.height = "50px";
+
+      	var i = 0;
+      	for (i = 0; i < menu.length; i++){
+  	menu[i].style.opacity="0.0";
+  	menu[i].style.marginTop="100px";
+  	};
+      	document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+
+  	}
+  	//to open
+  	else if (nav.style.height <= "50px") {
+  	nav.style.height = "475px";
+  	//main.style.marginTop = "275px";
+      	var i = 0;
+      	for (i = 0; i < menu.length; i++){
+  	menu[i].style.opacity="1.0";
+  	menu[i].style.marginTop="0";
+  	};
+      	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+  	}
+};
+</script>
+</body>
+</html>
